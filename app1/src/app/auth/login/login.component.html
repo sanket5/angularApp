@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" >
+            <div class="text-danger" *ngIf="error"> Error: Invalid User Creadentials </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="exampleInputEmail1">User Id</label>
+                <input class="form-control-plaintext" type="text" placeholder="User id" formControlName="userId" >
+                <small
+                    class="form-text text-muted text-danger"
+                    *ngIf="(loginForm.get('userId').hasError('minlength') || loginForm.get('password').hasError('maxlength') ) && loginForm.get('userId').dirty "
+                    > Invalid User Id. Must be of 8-20 Charecters 
+                </small>
+                <small
+                class="form-text text-muted text-danger"
+                *ngIf="loginForm.get('userId').hasError('required') && loginForm.get('userId').dirty "
+                > Feild Required 
+                </small>
+
+            </div>
+              <div class="form-group row">
+                <label for="exampleInputPassword1" class="col-sm-2 col-form-label">Password</label>
+                <input  class="form-control-plaintext"  type="password" formControlName="password" placeholder="Password">
+                <small
+                    class="form-text text-muted text-danger"
+                    *ngIf="(loginForm.get('password').hasError('minlength') || loginForm.get('password').hasError('maxlength')) && loginForm.get('userId').dirty "
+                    > Invalid Password. Must be of 8-20 Charecters 
+                </small>                
+                <small
+                class="form-text text-muted text-danger"
+                *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').dirty "
+                > Feild Required 
+                </small>
+
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>
