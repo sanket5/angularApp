@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserRequest } from '../../shared/models/user.model'
 
 @Component({
   selector: 'app-login',
@@ -16,14 +17,14 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router
     ) { }
-
+z
   ngOnInit(): void {
     this.createForm()
   }
 
   createForm(){
       this.loginForm =this.fb.group({
-        userId: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
+        id: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
         password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]]
       })      
   }
@@ -35,18 +36,17 @@ export class LoginComponent implements OnInit {
       this.error = 'Please enter login credentials to continue'
       return false
     }
-    this.authService.login(this.loginForm.value.userId, this.loginForm.value.password)
-      .subscribe(res=>{
-        console.log(res);
-        
-        if(!res){
-          this.error == 'Invalid User Credentials!'
+    let payload = new UserRequest()
+    payload.client_id = 'iJavaScript'
+    payload.user = this.loginForm.value
+    this.authService.login(this.loginForm.value.id, this.loginForm.value.password)
+      .subscribe(res=>{        
+        if(!res.success){
+          this.error = 'Invalid User Credentials!'
           return false
         }
         this.router.navigate(['/home'])
       })
-
-    
   }
 
 }

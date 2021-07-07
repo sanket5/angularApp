@@ -1,0 +1,14 @@
+
+{
+  "users":[
+      {
+          "client_id":"001",
+          "user":{
+            "id":"validUser",
+            "password":"validPassword"
+          }
+
+      }
+  ]
+  
+}

@@ -1,0 +1,58 @@
+
+
+.form{
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    padding: 30px;
+    background-color: rgb(236, 74, 74);
+}
+
+.header{
+    position: relative;
+    background-color: rgb(236, 74, 74);
+    width: 50%;
+    height:100px;
+    top: -100px;
+    padding: 30px;
+    margin-left: -30px;
+    &__title{
+        color: #FFF;
+
+    }   
+    &__desc{
+        font-size: xx-large;  
+        color: #FFF;
+    }
+}
+
+
+.btn-one{
+    background-color: #CC9900;
+    border: 2px solid #775900;
+    color: #FFF;
+    float: right;
+    margin-right: 10%;
+
+}
+
+.form-group{
+    padding: 0 100px;
+    margin: 20px 0;
+}
+
+.error-message{
+    color: white;
+    padding: 0 100px;
+    background-color: rgb(238, 127, 127);
+    line-height: 1.5;
+
+}
+
+small{
+    color: white;
+}
+.col-form-label{
+    color: white;
+    font-size: large;
+}
