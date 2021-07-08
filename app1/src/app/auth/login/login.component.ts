@@ -48,7 +48,10 @@ export class LoginComponent implements OnInit {
           return false
         }
         this.router.navigate(['/home'])
-      })
+      },(error=>{
+        console.log('Databas not found, Allowing user to log in');
+        this.router.navigate(['/home'])
+      }))
   }
 
 }

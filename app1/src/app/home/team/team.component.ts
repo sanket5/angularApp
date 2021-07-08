@@ -18,7 +18,11 @@ export class TeamComponent implements OnInit {
     this.userService.getTeam().subscribe(data=>{
       this.teams = data.data
       console.log(data);
-      
-    })
+    }, (error)=>{
+        console.log('Databas not found, providig dummy data');
+        this.teams=["Tom Hamk","Tom Cruise", "Hritik Roshan", "Amy Adams","Tim Cook", "Abrham Lonchon"]
+    }
+    )
+  
   }
 }
