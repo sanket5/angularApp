@@ -1,0 +1,23 @@
+
+
+<div class="container">
+    <div class="mt-4">
+        <h2> Meet The Team </h2>
+        <hr>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6">
+            <div class="team row" *ngFor="let team of teams">
+                <div class="col-2">
+                    <img class="rounded" style="width: 30px;" src="../../../assets/images/background.jpg" alt="">
+                </div>
+                <div class="col-8">
+                    {{ team }}
+                </div>
+            </div>
+        </div>
+        <div class="offset-2 col-4 animate">
+            <img style="width: 200px;" src="../../../assets/images/background.jpg" alt="">
+        </div>
+    </div>
+</div>

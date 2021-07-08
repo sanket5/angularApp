@@ -1,0 +1,51 @@
+
+
+.nav{
+    position: relative;
+    background-color: #f5f5f5;
+    height: 90vh;
+    top: 10vh;
+    &__header{
+        height: 15vh;
+        background-color: rgb(236, 74, 74);
+        padding: 20px;
+        &__title{
+            color: #FFF;
+    
+        }   
+        &__desc{
+            font-size: xx-large;  
+            color: #FFF;
+        }
+    }
+
+    &__item{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        font-weight: bold;
+        font-size: 28px;
+        color: #666666;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 2%;
+            width: 96%;
+            height: 2px;
+            background-color:  #666666;;
+        }
+        a{
+            text-decoration: none;
+            color: #666666;
+        }
+    }   
+}
+
+.inner_content{
+    position: relative;
+    background-color: #f5f5f5;
+    height: 75vh;
+    top:25vh;
+    margin-left: 20px;
+}
