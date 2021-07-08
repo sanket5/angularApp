@@ -5,6 +5,12 @@
     height: 200px;
     background-color: salmon;
     margin-top: 10px;
+    transition: all 1s;
+
+    &:hover{
+        background-color: black;
+        color: salmon;;
+    }
 }
 .title{
     font-weight: bolder;

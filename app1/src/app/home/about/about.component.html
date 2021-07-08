@@ -6,15 +6,15 @@
     </div>
     <hr>
     <div class="row user mt-4">
-        <div class="col-3 user__image">
+        <div class="col-lg-3 col-12 user__image">
             <img width="150px" src="../../../assets/images/background.jpg" img-fluid alt="image">
         </div>
-        <div class="col-9">
+        <div class="col-lg-9 col-12">
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum velit natus unde rem voluptatum blanditiis ex repellendus assumenda inventore. Eius quam, corporis illum atque hic possimus repellendus inventore delectus officia? </p>
         </div>
     </div>
     <div class="reusable row">
-        <div class="col-4" *ngFor="let card of cards">
+        <div class="col-lg-4 col-12" *ngFor="let card of cards">
             <app-card
             [cardName]="card.name"
             [cardDesc]="card.desc"

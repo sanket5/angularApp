@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+.row{
+    margin-right: 0;
+    padding-right: 0;
+}
+.row>* {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+
+.btn-1{
+    background-color: #CC9900;
+    border: 2px solid #775900;
+    color: #FFF;
+    float: right;
+    margin-right: 10%;
+    padding: 5px 20px 5px 20px ;
+    border-radius: 5px;
+}
+
+.btn-2{
+    background-color: #169bd5;
+    border-radius: 5px;
+    color: #FFF;
+    float: right;
+    padding: 3px 10px 3px 10px ;
+}
+
+input{
+    font-size: 13px;
+    padding: 5px;
+}
+
+.error-box{
+    background-color: #CC0000;
+    padding: 20px;
+}

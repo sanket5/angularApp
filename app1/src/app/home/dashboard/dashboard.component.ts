@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  
+  twoWay:string
+  check1
+  check2
   constructor() { }
 
   ngOnInit(): void {

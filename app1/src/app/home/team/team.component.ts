@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.services';
 
 @Component({
   selector: 'app-team',
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private userService: UserService) { }
+  teams;
   ngOnInit(): void {
+    this.getTeam()
   }
 
-  teams=['Tom Hamk',"Tom Cruise", "Hritik Roshan", "Amy Adams","Tim Cook", "Abrham Lonchon"]
-
+  getTeam(){
+    this.userService.getTeam().subscribe(data=>{
+      this.teams = data.data
+      console.log(data);
+      
+    })
+  }
 }

@@ -14,7 +14,7 @@ export class AuthService{
 
     login(userid, password){        
         return new Observable<any>((observer)=>{
-            this.http.get<[UserRequest]>('http://localhost:3000/users').subscribe(res=>{
+            this.http.get<[UserRequest]>('http://localhost:3000/auth').subscribe(res=>{
                 console.log(res);
                 let userResp = new UserResponse()
                 res.forEach(user => {                    

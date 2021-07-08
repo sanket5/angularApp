@@ -17,9 +17,11 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router
     ) { }
-z
   ngOnInit(): void {
     this.createForm()
+    this.loginForm.valueChanges.subscribe(()=>{
+      this.error =''
+    })
   }
 
   createForm(){

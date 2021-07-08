@@ -4,24 +4,26 @@
     position: absolute;
     top: 30%;
     width: 80%;
-    padding: 30px;
+    padding: 0 30px 20px;
     background-color: rgb(236, 74, 74);
 }
 
 .header{
     position: relative;
     background-color: rgb(236, 74, 74);
-    width: 50%;
+    width: 30%;
     height:100px;
     top: -100px;
-    padding: 30px;
+    padding: 5px 30px;;
     margin-left: -30px;
     &__title{
         color: #FFF;
+        font-size: 30px;
+
 
     }   
     &__desc{
-        font-size: xx-large;  
+        font-size: 50px;
         color: #FFF;
     }
 }
@@ -46,7 +48,10 @@
     padding: 0 100px;
     background-color: rgb(238, 127, 127);
     line-height: 1.5;
-
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 small{
@@ -55,4 +60,22 @@ small{
 .col-form-label{
     color: white;
     font-size: large;
+}
+
+@media only screen and (max-width : 480px) {
+    .header{
+        width: calc(100% + 30px);
+        top: 0;
+    }
+    .form{
+        top: 3%;
+        width: 94%;
+        transform: translateX(3%);
+    }
+    .form-group{
+        padding: 0;
+    }
+    form{
+        margin-top: 50px;
+    }
 }

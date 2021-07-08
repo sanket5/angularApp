@@ -2,12 +2,12 @@
 
 <div class="container">
     <div class="row user">
-        <div class="col-3 user__image">
+        <div class="col-lg-3 col-6 user__image">
             <img width="150px" src="../../../assets/images/background.jpg" img-fluid alt="image">
         </div>
-        <div class="col-9">
-            <h3> some title </h3>
-            <h4> text </h4>
+        <div class="col-lg-9 col-6">
+            <h3> Logged In User Name</h3>
+            <h4> Last login: yesterday 10 June 2021 </h4>
         </div>
     </div>
     <div class="acoount">
@@ -33,5 +33,41 @@
               </tr>
             </tbody>
           </table>
+    </div>
+    <hr>
+    <div class="alerts row">
+      <div class="col-lg-6 col-12 mt-4">
+        <h4> Subscribe to Alert </h4>
+        <div class="row">
+          <div class="form-check col-6">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="check1"id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              SMS Alert
+            </label>
+          </div>
+          <div class="form-check col-6">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="check2" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Email Alert
+            </label>
+          </div>
+        </div>
+        <div>
+          <h4> Selection Result </h4>
+          SMS Alert: <b> {{ check1? 'Checked': 'Not Checked'  }} </b>
+          Email Alert: <b>{{ check2? 'Checked': 'Not Checked'  }}</b>
+        </div>
+
+      </div>
+      <div class="col-lg-6 col-12 mt-4">
+        <div class="form-group row">
+          <label class="col-lg-4 col-12 col-form-label">Two Way Binding</label>
+          <input class="col-lg-6 col-12 form-control-lg" type="text" placeholder="User id" [(ngModel)]="twoWay" >
+        </div>
+        <div>
+          <h4> Selection Result </h4>
+          Entered Data: <b> {{ twoWay }}</b>
+        </div>
+      </div>
     </div>
 </div>

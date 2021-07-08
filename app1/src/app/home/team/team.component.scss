@@ -10,7 +10,16 @@
 }
 
 .animate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveIn 2s;
+    margin-top: 50px;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes moveIn {
@@ -21,4 +30,11 @@
     100% {transform: translateX(0);
         opacity: 1;
     }
+  }
+
+  @media only screen and (max-width : 480px) {
+    .container{
+        padding: 0 20px;
+    }
+
   }
